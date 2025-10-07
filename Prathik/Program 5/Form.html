@@ -1,0 +1,97 @@
+<html>
+<head>
+
+<style>
+h1 {
+    text-align: center;
+    
+   }
+.center {
+         text-align: center;
+         width: 50%;
+         padding: 10px;
+        }
+.bold-text {
+            font-weight:bold;
+           }
+.required::after {
+                  content:"*";
+                  color:red;
+                  font-size:20px;
+                 }
+.bgcolor {
+          background-color:lightblue;
+         }
+
+</style>
+<title>Registration</title>
+<body>
+<h1>Registration Form</h1>
+<form>
+<fieldset class="bgcolor">
+
+      <legend class="bold-text">User Information</legend>
+
+        <label for="name" class="required">Name:</label> &nbsp;
+        <select name="title">
+        <option value="title">Mr.</option>
+        <option value="title">Mrs.</option>
+        </select> &nbsp;
+        <input type="text" id="name" placeholder="Enter Name" required>
+
+<br><br>
+
+         <label for="mobno" class="required" required> Mob No. </label> &nbsp;
+         <input type="tel" id="mobno" name="mobno" placeholder="Enter mobile number" required>
+
+<br><br>
+
+         <label for="mail" class="required"> Email Id: </label> &nbsp;
+         <input type="mail" id="mail" name="mail" placeholder="Enter Email Id" required>
+      </fieldset>
+
+
+<br>
+<hr>
+<div class="bgcolor">
+<label for="address">Address: </label> &nbsp;
+<textarea id="address" name="address" rows="4" cols="40" placeholder="Enter your Address" required></textarea> 
+
+<br><br>
+
+         <label for="gender">Gender:</label> &nbsp;  
+         <input type="radio" id="Male" name="gender"><label for="Male">Male</label>&nbsp;                                   
+         <input type="radio" id="Female" name="gender"><label for="Female">Female</label> &nbsp;
+         <input type="radio" id="Other" name="gender"><label for="Other">Other</label>
+
+<br><br>
+
+        <label for="language">Languages known:</label> &nbsp;
+        <input type="checkbox" id="english" name="language"><label for="english">English</label> &nbsp;
+        <input type="checkbox" id="malayalam" name="language"><label for="malayalam">Malayalam</label> &nbsp;
+        <input type="checkbox" id="hindi" name="language"><label for="hindi">Hindi</label>
+
+<br><br>
+
+        <label for="course">Course:</label> &nbsp;
+        <select name="courses">
+        <option value="courses">MCA</option>
+        <option value="courses">MBA</option>
+        <option value="courses">Mtech</option>
+        </select>
+
+</div>
+        <hr>
+        
+<br><br>
+
+        <div class="center">
+        <button type="reset">Reset</button> &nbsp;
+        <button type="submit">Submit</button>
+        </div>
+</form>
+
+
+</body>
+</html>
+
