@@ -1,0 +1,127 @@
+<html>
+<head>
+<title> Registration(with js)</title>
+<style>
+      label {
+              display: inline-block;
+              width: 150px;
+              text-align: right;
+              }
+      background {
+              background-color: lightgrey;
+              } 
+      h1 {
+              text-align: center;
+              }
+      legend {
+              font-weight: bold;
+              }          
+          
+</style>              
+<script>
+       function validateForm()
+                            {
+                               var name = document.forms["myForm"]["fname"].value;
+                               var mob = document.forms["myForm"]["mob"].value;
+                               var email = document.forms["myForm"]["email"].value;
+                             
+                               
+                               //validat name
+                               if (name === "")
+                                           {
+                                            alert("Name must be filled out");
+                                            return false;
+                                            }
+                               //validate mob no
+                               if (mob === "")
+                                           {
+                                            alert("Mobile number must be filled out");
+                                            return false;
+                                            }
+                                if(!/^\d{10}$/.test(mob)) {
+                                            alert("Please enter a valid 10-digit mobile number");
+                                            return false;
+                                            }
+                                            
+                                //validate email
+                               if (email === "")
+                                           {
+                                            alert("Email must be filled out");
+                                            return false;
+                                            }
+                                //validate password match
+                               var pwd = document.forms["myForm"]["pwd"].value;
+                               var cpwd = document.forms["myForm"]["cpwd"].value;
+                               if (pwd !== cpwd)
+                                           {
+                                            alert("Passwords do not match");
+                                            return false;
+                                            }
+                                if(pwd === "" || cpwd === "")
+                                           {
+                                            alert("Password fields cannot be empty");
+                                            return false;
+                                            }
+                                if(pwd.length < 8) 
+                                           {
+                                            alert("Password must be at least 8 characters long");
+                                            return false;
+                                            }
+                                                      
+                                                         
+                              
+                               alert("Form submitted successfully!");
+                               return true;
+                                             
+                            } 
+</script>
+</head>
+
+<body>
+    <h1> Registration Form </h1>
+    
+<form name="myForm" onsubmit="return validateForm()">
+   <fieldset>
+      <legend> User Info </legend>
+              <label> Name: </label> &nbsp;
+                     <select name = "title">
+                            <option> MR </option>
+                            <option> MRS </option> 
+                     </select>&nbsp;
+              <input type="text" name="fname" >
+              <br><br>
+              <label> Mob No. </label> &nbsp;
+                     <select>
+                            <option> +91 </option>
+                            <option> +92 </option>
+                            <option> +93 </option>
+                     </select> &nbsp;
+              <input type="tel" name="mob" >
+              <br><br>
+              <label> Email: </label> &nbsp;
+              <input type="email" name ="email" >
+                                  
+</fieldset>
+
+<br><br>
+
+<label> Create Password </label> &nbsp;
+<input type ="password" name="pwd">
+   
+<br><br>
+
+<label> Confirm Password </label> &nbsp;
+<input type ="password" name="cpwd">
+
+<br><br>
+
+<button type="reset">Reset</button> &nbsp;
+<button type="submit">Submit</button>
+
+</form>
+</body>
+</html>       
+                     
+             
+      
+
