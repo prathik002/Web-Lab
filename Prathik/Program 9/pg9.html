@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3 Image Change (Enter & Leave)</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center;   
+            height: 100vh;         
+            margin: 0;              
+        }
+
+        .border-wrapper {
+            border: 5px solid green; 
+            border-radius: 50%;      
+            padding: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        #mainImg {
+            width: 250px;
+            height: 350px;
+            cursor: pointer;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+            border: 5px ; /* Inner border */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="border-wrapper">
+        <img id="mainImg" src="img1.jpg">
+    </div>
+
+    <script>
+        let img = document.getElementById("mainImg");
+        img.onmouseover = function () {
+            this.src = "img2.jpg";
+        };
+        img.onmouseout = function () {
+            this.src = "img3.jpg";
+        };
+    </script>
+</body>
+</html>
+
